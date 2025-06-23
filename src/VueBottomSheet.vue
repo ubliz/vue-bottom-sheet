@@ -120,6 +120,10 @@ window.addEventListener('keyup', (event: KeyboardEvent) => {
   }
 })
 
+onUnmounted(() => {
+  window.removeEventListener('keyup', isFocused)
+}),
+
 /**
  * Return all classes for bottom sheet content
  */
