@@ -27,7 +27,7 @@
 </template>
 
 <script setup lang="ts">
-import { computed, nextTick, ref } from 'vue'
+import { computed, nextTick, ref, onUnmounted } from 'vue'
 import Hammer from 'hammerjs'
 
 /**
@@ -122,7 +122,7 @@ window.addEventListener('keyup', (event: KeyboardEvent) => {
 
 onUnmounted(() => {
   window.removeEventListener('keyup', isFocused)
-}),
+})
 
 /**
  * Return all classes for bottom sheet content
